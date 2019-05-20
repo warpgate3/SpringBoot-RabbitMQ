@@ -1,0 +1,50 @@
+server:
+  port: 7001
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: test_user
+    password: 1234
+    listener:
+      type: simple                #direct: 리스너가 rabbitmq 소비자에서 직접 호출되는 컨테이너 ,  simple: RabbitMQ 소비자가 호출자에게 메시지를 발송하는 컨테이너
+      simple:
+        auto-startup: true        #Container 시작시 바로 listening , false 일경우 spring boot run 하고 바로 종료됨
+        acknowledge-mode: auto    # 수신 완료시 응답모드
+        idle-event-interval: 10000ms
+        prefetch: 100            #un ack 할수 있는 최태 값
+        transaction-size: 100    #트랜잭션 ack 하는 응답 단위 갯수 , 이값이 prefetch 보다 크면 prefetch 값이 transaction-size 만큼 증가
+        concurrency: 4           #최소 쓰레드 갯수
+        max-concurrency: 8        #최대 쓰레드 갯수
+        default-requeue-rejected: false
+        missing-queues-fatal: true
+        retry:
+          enabled: true
+          initial-interval: 1000ms
+          max-attempts: 3
+          max-interval: 10000ms
+          stateless: true
+          multiplier: 1
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/hds?characterEncoding=UTF-8&serverTimezone=UTC
+    username: test_user
+    password: test1234
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        max-wait: 5000ms
+        min-idle: 10
+        time-between-eviction-runs: 5000ms
+      shutdown-timeout: 100ms
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 5000
+    default-statement-timeout: 300
+  mapper-locations: classpath:sql/*.xml

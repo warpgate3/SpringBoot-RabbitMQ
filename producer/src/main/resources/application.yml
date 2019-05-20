@@ -1,0 +1,13 @@
+server:
+  port: 7000
+
+spring:
+  rabbitmq:
+    host: 106.10.58.63
+    port: 5672
+    template:
+      exchange: m2sj.exchange
+    username: test_user
+    password: 1234
+
+
