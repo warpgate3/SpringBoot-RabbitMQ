@@ -4,10 +4,43 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/consumer" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/consumer" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/producer" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/producer" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/rabbitmq" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/rabbitmq" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/rabbitmq/src/main" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/rabbitmq/src/main" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

@@ -5,6 +5,12 @@
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="consumer.main" target="1.8" />
+      <module name="consumer.test" target="1.8" />
+      <module name="info.m2sj.consumer.main" target="1.8" />
+      <module name="info.m2sj.consumer.test" target="1.8" />
+      <module name="producer.main" target="1.8" />
+      <module name="producer.test" target="1.8" />
       <module name="rabbitmq.main" target="1.8" />
       <module name="rabbitmq.test" target="1.8" />
     </bytecodeTargetLevel>
